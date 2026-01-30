@@ -16,13 +16,13 @@ public class movie
             Scanner sc=new Scanner(System.in);
             String op="select * from watchlist";
             System.out.println("Enter movie name:");
-            String mov=sc.next();
+            String mov=sc.nextLine();
             System.out.println("Enter genre:");
-            String gen=sc.next();
+            String gen=sc.nextLine();
             System.out.println("Enter rating:");
             float rat=sc.nextFloat();
             System.out.println("Enter status:");
-            String stat=sc.next();
+            String stat=sc.nextLine();
             String query="insert into watchlist value(?,?,?,?)";
             PreparedStatement st=con.prepareStatement(query);
             st.setString(1,mov);
